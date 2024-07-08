@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next job</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+    <style>
+        #banner {
+            height:400px ;
+            object-fit:cover;
+            width:100%;
+        }
+        h2{
+            font-family: 'Noto Sans', sans-serif;
+            color: rgba(50, 50, 50, 0.6);
+
+        }
+        .Nxt {
+            position:relative;
+        }
+        .button {
+          position: relative;
+          transition: all 0.3s ease-in-out;
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+          padding-block: 0.5rem;
+          padding-inline: 1.25rem;
+          background-color: rgb(0 107 179);
+          border-radius: 9999px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          color: #ffff;
+          gap: 10px;
+          font-weight: bold;
+          border: 3px solid #ffffff4d;
+          outline: none;
+          overflow: hidden;
+          font-size: 15px;
+        }
+
+        .icon {
+          width: 24px;
+          height: 24px;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .button:hover {
+          transform: scale(1.05);
+          border-color: #fff9;
+        }
+
+        .button:hover .icon {
+          transform: translate(4px);
+        }
+
+        .button:hover::before {
+          animation: shine 1.5s ease-out infinite;
+        }
+
+        .button::before {
+          content: "";
+          position: absolute;
+          width: 100px;
+          height: 100%;
+          background-image: linear-gradient(
+            120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.8),
+            rgba(255, 255, 255, 0) 70%
+          );
+          top: 0;
+          left: -100px;
+          opacity: 0.6;
+        }
+
+        @keyframes shine {
+          0% {
+            left: -100px;
+          }
+
+          60% {
+            left: 100%;
+          }
+
+          to {
+            left: 100%;
+          }
+        }
+
+
+    </style>
+
+
+<body>
+    <div style=object-position:top> 
+        <img class="Nxt" src="https://fc2795ad-44dc-4d9b-bc22-e8abe6e11796-00-1u7xpea18aj8.sisko.replit.dev/static/Nxt0.png"height="200"  >
+
+
+    </div>
+    <div class=container>
+      <img src="https://fc2795ad-44dc-4d9b-bc22-e8abe6e11796-00-1u7xpea18aj8.sisko.replit.dev/static/nxt2.jpg"class="img-fluid" id = banner >
+
+        <h2 class ="text-center">About NE-XT Careers</h2>
+        <p class ="lead">
+            Welcome to the NE-XT Careers section, where we are dedicated to helping freshers make their dream job a 
+            reality. We understand that starting your professional journey can be overwhelming, with many obstacles 
+            and 
+            uncertainties along the way. That's why we are here to provide guidance, support, and resources to 
+            assist 
+            you in reaching your career goals.
+            Our mission is simple - to bridge the gap between freshers and their dream jobs. We believe that 
+            everyone 
+            deserves an opportunity to pursue their passion and embark on a fulfilling career path. Whether you 
+            aspire 
+            to be an engineer, designer, marketer, or any other profession that excites you, we have tailored our 
+            services specifically for your needs.
+        </p>
+        <h2 class="text-center"> Job Opening</h2>
+        <div>{% for job in jobs %}
+            {% include 'jobitem.html' %}
+
+            {% endfor %}
+        </div>
+        <div style = "text-align:center">
+            <button class ="btn btn-primary btn-lg"> contact us  </button>
+        </div>
+</div>
+
+</body>
+</html>
