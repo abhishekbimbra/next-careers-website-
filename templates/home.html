@@ -12,11 +12,12 @@
             height:400px ;
             object-fit:cover;
             width:100%;
+            margin-bottom:16px;
         }
         h1{
            
-          font-family: Roboto;
-          color:rgba(120, 50, 300, 0.6);
+          font-family: ;
+          color:rgba(0, 0, 0, 0.6);
         }
         h2{
             font-family: 'Noto Sans', sans-serif;
@@ -28,25 +29,33 @@
 
 
 <body>
-  <h1 class="text-center fw-semibold">NE-XT Careers</h1>
+  {% include 'nav.html' %}
+  <img src="https://fc2795ad-44dc-4d9b-bc22-e8abe6e11796-00-1u7xpea18aj8.sisko.replit.dev/static/next.jpg"class="img-fluid" id = banner >
+  <h1 class="text-center ">NE-XT Careers</h1>
     <div class=container>
-      <img src="https://fc2795ad-44dc-4d9b-bc22-e8abe6e11796-00-1u7xpea18aj8.sisko.replit.dev/static/next.jpg"class="img-fluid" id = banner >
-
-        <h2 class ="text-center">About NE-XT Careers Portal</h2>
-        <p class ="lead">
-            Welcome to the NE-XT Careers section, where we are dedicated to helping freshers make their dream job a 
-            reality. We understand that starting your professional journey can be overwhelming, with many obstacles 
-            and 
-            uncertainties along the way. That's why we are here to provide guidance, support, and resources to 
-            assist 
-            you in reaching your career goals.
-            Our mission is simple - to bridge the gap between freshers and their dream jobs. We believe that 
-            everyone 
-            deserves an opportunity to pursue their passion and embark on a fulfilling career path. Whether you 
-            aspire 
-            to be an engineer, designer, marketer, or any other profession that excites you, we have tailored our 
-            services specifically for your needs.
-        </p>
+      <div class="row">
+        <div class="col-6">
+          <p class ="lead">
+              Welcome to the NE-XT Careers section, where we are dedicated to helping freshers make their dream job a 
+              reality. We understand that starting your professional journey can be overwhelming, with many obstacles 
+              and 
+              uncertainties along the way. That's why we are here to provide guidance, support, and resources to 
+              assist 
+              you in reaching your career goals.
+              Our mission is simple - to bridge the gap between freshers and their dream jobs. We believe that 
+              everyone 
+              deserves an opportunity to pursue their passion and embark on a fulfilling career path. Whether you 
+              aspire 
+              to be an engineer, designer, marketer, or any other profession that excites you, we have tailored our 
+              services specifically for your needs.
+          </p>
+        </div>
+        <div class="col-6" >
+          <img src="/static/people.jpg" style="height:320px;border-radius:4px;margin-bottom:16px;margin-left:70px;" >
+        </div>
+        
+      </div>
+     
         <h2 class="text-center"> Job Openings</h2>
         <div>{% for job in jobs %}
             {% include 'jobitem.html' %}
@@ -57,6 +66,6 @@
             <button class ="btn btn-primary btn-lg"> contact us  </button>
         </div>
 </div>
-
+{%include 'footer.html'%}
 </body>
 </html>
