@@ -34,7 +34,7 @@
   <h1 class="text-center ">NE-XT Careers</h1>
     <div class=container>
       <div class="row">
-        <div class="col-6">
+        <div class="col-md-6">
           <p class ="lead">
               Welcome to the NE-XT Careers section, where we are dedicated to helping freshers make their dream job a 
               reality. We understand that starting your professional journey can be overwhelming, with many obstacles 
@@ -50,7 +50,7 @@
               services specifically for your needs.
           </p>
         </div>
-        <div class="col-6" >
+        <div class=" d-none d-md-block col-md-6" >
           <img src="/static/people.jpg" style="height:320px;border-radius:4px;margin-bottom:16px;margin-left:70px;" >
         </div>
         
@@ -63,7 +63,7 @@
             {% endfor %}
         </div>
         <div style = "text-align:center">
-            <button class ="btn btn-primary btn-lg"> contact us  </button>
+            <a href="mailto:hello@Next.job?subject=Question%20about%20job%20Openings&body=My%20name%20%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20Question%20%3A%20%3CMy%20Question%3E" class ="btn btn-primary btn-lg"> contact us  </a>
         </div>
 </div>
 {%include 'footer.html'%}
